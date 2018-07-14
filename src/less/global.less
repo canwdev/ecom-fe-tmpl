@@ -10,6 +10,7 @@ html {
 
 html, body {
     height: 100%;
+    min-width: 1200px;
 }
 
 ::selection {
@@ -26,6 +27,14 @@ li {
     list-style: none;
 }
 
+a {
+    color: @mainColor !important;
+}
+
+a:hover {
+    // text-decoration: underline !important;
+}
+
 .clearfix::before,
 .clearfix::after {
     content: ' ';
@@ -36,4 +45,156 @@ li {
     clear: both;
 }
 
+.w1200 {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.use-main-color {
+    color: @mainColor !important;
+}
+
+.fright {
+    float: right;
+}
+
 /* end-通用工具类 */
+
+
+// ---------- header --------------
+
+.header-adbanner {
+    display: none;
+}
+
+.header-toolbar {
+    overflow: hidden;
+    background-color: @grey;
+}
+
+.header-toolbar .w1200 {
+}
+
+.header-toolbar p {
+    display: inline-block;
+    margin: 5px auto;
+}
+
+
+.header-toolbar li {
+    display: inline-block;
+    margin: 5px auto;
+    margin-left: -3px;
+    text-align: center;
+    padding: 0 10px;
+}
+.header-toolbar li+li {
+    border-left: 1px solid rgb(196, 196, 196);
+}
+
+.header-main {
+    
+}
+
+.header-logo {
+    width: 159px;
+    height: 50px;
+    margin: 20px auto;
+    float: left;
+}
+
+.header-logo img {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.header-search {
+    float: left;
+    margin: 20px 0 0 40px ;
+}
+
+.header-search-tab {
+    display: block;
+}
+
+.header-search-tab li{
+    display: inline-block;
+    padding: 0 15px;
+    border-radius: 3px 3px 0 0;
+    height: 23px;
+    line-height: 23px;
+}
+
+.header-search-tab li.active {
+    background-color: @mainColor;
+}
+
+.header-search-tab a {
+    display: block;
+}
+
+.header-search-tab li.active a {
+    color: #fff !important;
+}
+
+.header-search-box {
+    border: 2px solid @mainColor;
+    height: 30px;
+    line-height: 30px;
+    float: left;
+    clear: both;
+}
+
+.header-search-box input {
+    padding: 3px;
+    height: 26px;
+    line-height: 26px;
+    float: left;
+    width: 395px;
+    border: 0 none;
+    background: none;
+    outline: 0;
+}
+
+
+.header-search-box .pc-search {
+    width: 45px;
+    background-color: @mainColor;
+    float: right;
+    overflow: hidden;
+    text-align: center;
+    color: @white;
+    background-position: 14px -144px;
+    cursor: pointer;
+}
+
+.header-main-right {
+    margin: 20px auto;
+    float: right;
+}
+
+.header-nav {
+    border-bottom: 2px solid @mainColor;
+}
+
+.header-nav li {
+    display: inline-block;
+    min-width: 160px;
+    text-align: center;
+    line-height: 32px;
+}
+
+.header-nav li.active {
+    background-color: @mainColor;
+}
+
+.header-nav li.active a {
+    color: @white !important;
+}
+
+.header-nav li a {
+    display: block;
+}
+
+// ---------- end-header --------------

@@ -136,7 +136,7 @@ gulp.task('imagemin', function () {
 })
 
 gulp.task('watchimage', function () {
-    gulp.watch('src/img/**/*.{png,jpg,gif,ico}', function (ev) {
+    gulp.watch('src/**/*.{png,jpg,gif,ico}', function (ev) {
         var paths = watchPath(ev, 'src/', 'dist/');
         gutil.log(gutil.colors.green(ev.type) +
             ': ' + paths.srcPath + ' → ' + paths.distPath);
