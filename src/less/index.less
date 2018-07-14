@@ -1,0 +1,71 @@
+@import "global-variables.less";
+
+/* 通用工具类 */
+
+html {
+    // font-size: 62.5%;
+    color: @black;
+    font-family: "Microsoft Yahei";
+}
+
+html, body {
+    height: 100%;
+}
+
+::selection {
+    background-color: @selection;
+    text-shadow: none;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style: none;
+}
+
+.clearfix::before,
+.clearfix::after {
+    content: ' ';
+    display: table;
+}
+
+.clearfix::after {
+    clear: both;
+}
+
+/* end-通用工具类 */
+
+
+/* bootstrap theme */
+
+.navbar {
+    box-shadow: 0 0 10px @shadowColor;
+}
+
+.bg-dark {
+    background-color: @mainBackground !important;
+}
+
+.navbar-dark .navbar-brand, .navbar-dark .navbar-brand:focus, .navbar-dark .navbar-brand:hover {
+    color: @mainColor ;
+}
+
+button:focus {
+  outline-color: @mainColor;
+}
+
+a {
+    color: @mainColor;
+    text-decoration: none;
+    background-color: transparent;
+    -webkit-text-decoration-skip: objects;
+}
+
+.main-div {
+    padding-top: 5rem;
+}
+
+/* end-bootstrap theme */

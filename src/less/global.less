@@ -1,0 +1,39 @@
+@import "global-variables.less";
+
+/* 通用工具类 */
+
+html {
+    // font-size: 62.5%;
+    color: @black;
+    font-family: "Microsoft Yahei";
+}
+
+html, body {
+    height: 100%;
+}
+
+::selection {
+    background-color: @selection;
+    text-shadow: none;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style: none;
+}
+
+.clearfix::before,
+.clearfix::after {
+    content: ' ';
+    display: table;
+}
+
+.clearfix::after {
+    clear: both;
+}
+
+/* end-通用工具类 */
