@@ -1,7 +1,6 @@
-//------------------ header.html ------------------
-$(function () {
-    $('.js-userlogin').on('click', function(ev){
-        ev.preventDefault();
+//  --------------- login -------------------------
+function login(url) {
+    if (!checkLogin()) {
         layer.open({
             type: 2,
             area: ['700px', '450px'],
@@ -10,6 +9,21 @@ $(function () {
             content: 'login.html',
             anim: 5
           });
+    } else {
+        location.href = url
+    }
+}
+function checkLogin() {
+    // todo get login status from server
+    return false;
+}
+
+
+// ------------------ header.html ------------------
+$(function () {
+    $('.js-userlogin').on('click', function(ev){
+        ev.preventDefault();
+        login();
     });
 });
 
