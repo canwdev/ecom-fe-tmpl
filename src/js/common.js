@@ -1,3 +1,18 @@
+//------------------ header.html ------------------
+$(function () {
+    $('.js-userlogin').on('click', function(ev){
+        ev.preventDefault();
+        layer.open({
+            type: 2,
+            area: ['700px', '450px'],
+            fixed: false, //不固定
+            maxmin: false,
+            content: 'login.html',
+            anim: 5
+          });
+    });
+});
+
 
 // ------------ header_search.html ------------------
 $(function () {
@@ -24,7 +39,11 @@ $(function () {
         if (searchInput.val().trim() !== '') {
             alert("搜索内容：" + searchInput.val()+"，类别："+tabMain.attr('data-type'));
         } else {
-            alert("请输入搜索内容！");
+            layer.tips('请输入搜索内容！', searchSubmit, {
+                tips: [3, '#333'],
+                time: 1000,
+                anim: 5
+            });
         }
     })
 }) 

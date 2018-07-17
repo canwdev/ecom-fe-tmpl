@@ -28,11 +28,12 @@ li {
 }
 
 a {
-    color: @mainColor !important;
+    color: @mainColor;
+    text-decoration: none;
 }
 
 a:hover {
-    // text-decoration: underline !important;
+    // text-decoration: underline;
 }
 
 .clearfix::before,
@@ -80,6 +81,9 @@ a:hover {
     margin: 5px auto;
 }
 
+.header-toolbar a:hover {
+    text-decoration: underline;
+}
 
 .header-toolbar li {
     display: inline-block;
@@ -111,7 +115,7 @@ a:hover {
 
 .header-search {
     float: left;
-    margin: 20px 0 0 40px ;
+    margin: 20px 0 0 240px ;
 }
 
 .header-search-tab {
@@ -135,7 +139,7 @@ a:hover {
 }
 
 .header-search-tab li.active a {
-    color: #fff !important;
+    color: @white;
 }
 
 .header-search-box {
@@ -195,6 +199,81 @@ a:hover {
 
 .header-nav li a {
     display: block;
+    color: @black;
+    font-weight: bold;
 }
 
+.header-nav li a .icon-user {
+    background-color: #a7a7a7;
+    border-radius: 50%;
+    padding: 3px;
+    margin-right: 3px;
+    color: #fff;
+    font-weight: normal;
+}
+
+
+
 // ---------- end-header --------------
+
+
+// ----------- footer -----------------
+
+.footer {
+    background-color: @footerBlack;
+    color: @footerColor;
+    padding: 1px;
+}
+.footer a {
+    color: @footerColor;
+}
+.footer a:hover {
+    color: @mainColor;
+}
+.footer-links {
+    width: 100%;
+    margin: 10px auto;
+}
+.footer-links>div+div {
+    border-left: 1px solid #2B2B2B;
+}
+.footer-item {
+    float: left;
+    width: 174px;
+    font-size: 15px;
+    padding: 10px 20px;
+}
+.footer-item li {
+    line-height: 30px;
+}
+
+.footer-item .iconfont {
+    color: @mainColor;
+    font-size: 20px !important;
+    margin-right: 3px;
+}
+
+.footer-copyright, .footer-beian {
+    line-height: 45px;
+    text-align: center;
+}
+
+.footer-sns-item {
+    width: 300px;
+}
+.footer-sns-item .iconfont {
+    color: @grey;
+    font-size: 40px !important;
+    margin-right: 3px;
+}
+.footer-sns-item .iconfont:hover {
+    color: @mainColor;
+}
+.footer-sns-github {
+    margin-right: 30px;
+
+}
+.footer-sns-github, .footer-sns-qrcode {
+    float: left;
+}
+// ----------- end-footer -----------------
